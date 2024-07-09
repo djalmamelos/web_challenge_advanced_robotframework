@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-06-27T16:28:48.966051" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSitePractice" source="/Users/djalmamelos/Documents/PESSOAL/VN2425/MpTI/CursoUdemyAutomacao/RobotFramework/Avançado/SuiteSiteTestePracticePO/tests/TestSitePractice.robot">
+<test id="s1-t1" name="Caso de Teste com PO 01: Remover Produtos do Carrinho" line="10">
+<kw name="Abrir navegador" owner="Resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:28:49.066161" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-27T16:28:49.066055" elapsed="8.748896"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:28:49.065710" elapsed="8.750364"/>
+</kw>
+<kw name="Acessar a página home do site" owner="Home">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:28:57.818588" level="INFO">Opening url 'http://automationpractice.pl'</msg>
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-27T16:28:57.818419" elapsed="19.986101"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_TOPMENU}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:17.806447" elapsed="0.246449"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:18.059015" level="INFO">Page title is 'My Shop'.</msg>
+<arg>${HOME_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-06-27T16:29:18.053146" elapsed="0.005919"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:28:57.817453" elapsed="20.241694"/>
+</kw>
+<kw name="Adicionar o produto &quot;printed dress&quot; no carrinho" owner="Home" source_name="Adicionar o produto &quot;${PRODUTO}&quot; no carrinho">
+<kw name="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa" owner="Home" source_name="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:18.061024" level="INFO">Typing text 'printed dress' into text field 'name=search_query'.</msg>
+<arg>${HOME_FIELD_PESQUISAR}</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:18.060869" elapsed="1.270101"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:18.060404" elapsed="1.270735"/>
+</kw>
+<kw name="Clicar no botão pesquisar" owner="Home">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:19.331702" level="INFO">Clicking element 'name=submit_search'.</msg>
+<arg>${HOME_BTN_PESQUISAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:19.331545" elapsed="2.735851"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:19.331310" elapsed="2.736161"/>
+</kw>
+<kw name="Clicar no botão &quot;Add to Cart&quot; do produto" owner="Home">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_PRODUCT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:22.067814" elapsed="0.066274"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:22.134453" level="INFO">Clicking element 'xpath=//img[@src='http://www.automationpractice.pl/img/p/1/0/10-home_default.jpg']'.</msg>
+<arg>${HOME_PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:22.134231" elapsed="1.767372"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_PINKDRESS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:23.901754" elapsed="0.117554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:24.019596" level="INFO">Clicking element 'id=color_24'.</msg>
+<arg>${HOME_PINKDRESS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:24.019445" elapsed="0.743915"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_BTN_ADDCART}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:24.763497" elapsed="0.433275"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:25.197098" level="INFO">Clicking button 'xpath=//*[@id="add_to_cart"]/button'.</msg>
+<arg>${HOME_BTN_ADDCART}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:25.196938" elapsed="0.728901"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:22.067613" elapsed="3.858338"/>
+</kw>
+<kw name="Clicar no botão &quot;Proceed to checkout&quot;" owner="Home">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_BTN_CHECKOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:25.926438" elapsed="1.386607"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:27.314216" level="INFO">Clicking element 'xpath=//*[@id="layer_cart"]//a[@title="Proceed to checkout"]'.</msg>
+<arg>${HOME_BTN_CHECKOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:27.313744" elapsed="1.282348"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:25.926075" elapsed="2.670159"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:18.060133" elapsed="10.536185"/>
+</kw>
+<kw name="Excluir o produto do carrinho" owner="Carrinho">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:28.599804" level="INFO">Page title is 'Order - My Shop'.</msg>
+<arg>${CARRINHO_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-06-27T16:29:28.596972" elapsed="0.002921"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CARRINHO_DELETAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:28.599984" elapsed="0.016911"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:28.617184" level="INFO">Clicking element 'xpath=//*[@class="cart_quantity_delete"]'.</msg>
+<arg>${CARRINHO_DELETAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T16:29:28.617014" elapsed="0.226802"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:28.596621" elapsed="0.247319"/>
+</kw>
+<kw name="Conferir se o carrinho fica vazio" owner="Carrinho">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CARRINHO_MSG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T16:29:28.844530" elapsed="0.984250"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:29.829304" level="INFO">Verifying element 'xpath=//*[@id="center_column"]/p[@class='alert alert-warning']' contains exact text 'Your shopping cart is empty.'.</msg>
+<arg>${CARRINHO_MSG}</arg>
+<arg>Your shopping cart is empty.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-27T16:29:29.829048" elapsed="0.056307"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:28.844311" elapsed="1.041131"/>
+</kw>
+<kw name="Fechar navegador" owner="Resource" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-27T16:29:30.124502" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-82.png"&gt;&lt;img src="selenium-screenshot-82.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-27T16:29:29.885887" elapsed="0.239066"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-27T16:29:30.125112" elapsed="0.203142"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:29:29.885716" elapsed="0.442618"/>
+</kw>
+<status status="PASS" start="2024-06-27T16:28:49.065404" elapsed="41.263015"/>
+</test>
+<status status="PASS" start="2024-06-27T16:28:48.966700" elapsed="41.362127"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestSitePractice">TestSitePractice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
