@@ -23,10 +23,10 @@ Este projeto foi criado para demonstrar habilidades em automação de testes web
 
 Antes de começar, você vai precisar ter o seguinte instalado em sua máquina:
 
-- Python 3.x
-- RobotFramework
-- SeleniumLibrary
-- Webdriver para o navegador que você vai usar (por exemplo, ChromeDriver para Google Chrome)
+- [Python 3.x](https://www.python.org/downloads/)
+- [RobotFramework](https://robotframework.org/?tab=1#getting-started) na sessão de Install tem o código para usar no terminal do seu computador
+- [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary/) seguir as instruções no readme
+- Webdriver para o navegador que você vai usar por exemplo, ChromeDriver para [Google Chrome](https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/)
 
 ## Estrutura do Projeto 📁
 
